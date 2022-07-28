@@ -4,77 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flipper</title>
-    <!-- link CSS file-->
-    <link rel="stylesheet" href="style.css">
+    <title>Pac-Man</title>
+     <!--shadow box was added with the css styling below-->
+     <!--to center the body whenever the screen moves, I added a flex display with justify-content; 
+        center, to keep the scroll bars hidden add overflow: hidden
+    linear gradient allows for a ombre background color of my choice that starts at 50% to 100% of the next color-->
+    <style>
+        #gameCanvas {
+            box-shadow: 10px 10px 20px black;
+        }
+        h1 {
+            text-align: center;
+            font-family: comic sans Ms;
+            color: lightgrey
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            height: 100vh;
+            background:linear-gradient(#c235a3, #611270);
+        }
+    </style>
 </head>
 <body>
-
-    <h1>Flipper</h1>
-
-    <!--create game cards using div containers wrapped within a section-->
-    <section class="matching-game">
-    <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-      <img class="front-face" src="loopimg.JPG" alt="Loop Definition">
+    <div>
+        <h1>Pac-Man</h1>
+        <canvas id="gameCanvas"></canvas>
     </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="loopimg2.JPG" alt="Loop Vocabulary Word">
-      </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="ifelseimg.JPG" alt="If Else Definition">
-      </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="ifelseimg2.JPG" alt="If Else Vocabulary Word">
-      </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="arrayimg.JPG" alt="Array Definition">
-      </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="arrayimg2.JPG" alt="Array Vocabulary Word">
-      </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="functionimg.JPG" alt="Function Definition">
-      </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="function2.JPG" alt="Function Vocabulary Word">
-      </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="objectimg.JPG" alt="Object Definition">
-      </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="objectimg2.JPG" alt="Object Vocabulary Word">
-      </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="variableimg.JPG" alt="Variable Definition">
-      </div>
-
-      <div class="matching-card">
-        <img class="back-face" src="jsimg.png" alt="JavaScript Image">
-        <img class="front-face" src="variable2.JPG" alt="Variable Vocabulary Word">
-      </div>
-    </section>
-    <!-- link JavaScript file-->
-<script src="main.js"></script> 
+    <script src="game.js"></script>
 </body>
 </html>
