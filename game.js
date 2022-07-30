@@ -1,45 +1,20 @@
+import TileMap from "./TileMap.js";
 
 
-/*1st  define canvas to find it's html element by id 'gameCanvas';
-to get reference from context to canvas by defining context using 2d
-*/
+//Create the following variable that will be needed for the game to operate and be view on the browser.
 
-const tileSize = 32;
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
-//const tilemap = new tilemap(tileSize)
-/* 2nd create the function gameLoop will redraw the game every second for up to 75 times using setInterval; 
-1000 miliseconds = 1 second (Most Important Part of the Game) 
-Identify how big the tiles should be in the game using tileSize*/ 
+const canvas = document.getElementById('gameCanvas'); //1st  define canvas to find it's html element by id 'gameCanvas';
+const ctx = canvas.getContext('2d'); //define this to draw to the screen in 2d
+const tileSize = 32; //we want each tile as 32 pixels; Identify how big the tiles should be in the game using tileSize
 
-class Tilemap {
-    constructor(tileSize) {
-        this.tileSize = tileSize
-    
+//the tileMape has to be initialized after being imported on line 1 by creating a variable.  
+const tileMap = new TileMap(tileSize); //passing in the tile size 
 
-    }
-    map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-           [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    ];
-    /*define an empty method called draw */
-    draw() {
-        //console.log('draw');
-    }
-}
-
+/* 2nd create the function gameLoop; this loop will redraw the game every second for up to 75 times using setInterval; 
+1000 miliseconds = 1 second (This Function is the Most Important Part of the Game) */
 function gameLoop() {
-//console.log('game loop') ran it to make sure my gameLoop was working properly
 
-//Tilemap.draw();
+tileMap.draw(canvas, ctx); // we will execute this on every single loop of the game
 }
 
 setInterval(gameLoop, 1000 / 75);
