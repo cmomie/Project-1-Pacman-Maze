@@ -14,7 +14,7 @@ const tileMap = new TileMap(tileSize); //passing in the tile size
 1000 miliseconds = 1 second (This Function is the Most Important Part of the Game) */
 function gameLoop() {
 
-tileMap.draw(canvas, ctx); // we will execute this on every single loop of the game
+tileMap.draw(canvas,ctx); // we will execute this on every single loop of the game
 }
 
 setInterval(gameLoop, 1000 / 75);
