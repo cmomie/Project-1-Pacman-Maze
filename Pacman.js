@@ -40,27 +40,27 @@ export default class Pacman {
 
     #keydown =(event)=>{
         //up
-        if(event.keyCode == w){
+        if(event.keyCode === 'KeyW'){
             if(this.currentMovindDirection == MovingDirection.down)
                 this.currentMovindDirection = MovingDirection.up;  
             this.requestedMovingDirection = MovingDirection.up;
         }
         //down
-        if(event.keyCode == s){
+        if(event.keyCode === "KeyS"){
             if(this.currentMovindDirection == MovingDirection.up)
             this.currentMovindDirection = MovingDirection.down;  
         this.requestedMovingDirection = MovingDirection.down;
 
         }
         //left
-        if(event.keyCode == a){
+        if(event.keyCode === "KeyA"){
             if(this.currentMovindDirection == MovingDirection.right)
             this.currentMovindDirection = MovingDirection.left;  
         this.requestedMovingDirection = MovingDirection.left;
 
         }
         //right
-        if(event.keyCode == d){
+        if(event.keyCode == "KeyD"){
             if(this.currentMovindDirection == MovingDirection.left)
             this.currentMovindDirection = MovingDirection.right;  
         this.requestedMovingDirection = MovingDirection.right;
