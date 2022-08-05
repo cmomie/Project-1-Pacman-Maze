@@ -23,3 +23,5 @@ source used to inspire game: https://youtu.be/Tk48dQCdQ3E
 **********Obstacles : the game board in not black according to the code on line 44 of the TileMap.js file. 
 I was able to increase the size of my gameboard. 
 I plan to continue to work on adding the players to my board. 
+
+I'm confused about how the images are in two different places pacman.js and tileMap.js I think they one overides the other
