@@ -1,10 +1,15 @@
+import Pacman from "./Pacman.js"
 export default class TileMap {
     constructor(tileSize){
         this.tileSize = tileSize; //implement the constructor and pass the tile size with by setting a variable for it
-        this.wall = this.#image('wall.png');
+        this.wall = this.#image('wall.png'); //reference to images directory inside the tilemap constructor
         this.pacman = this.#image('pac1.png');
+        this.pacman0 = this.#image('pac0.png');
+        this.pacman2 = this.#image('pac2.png');
         this.dot = this.#image('yellowDot.png');
         this.ghost = this.#image('ghost.png');
+        this.ghost1 = this.#image('scaredGhost.png');
+        this.dot1 = this.#image('pinkDot.png');
 
     } 
 
@@ -20,8 +25,10 @@ export default class TileMap {
     //created a legend to identify the part of the game board and players
     //1 = wall
     //0 = dots
-    //2 = pacman
-    //3 = enemies
+    //2 = pacman pac1
+    //3 = enemies ghost
+    //4 = scared enemies ghost1
+    //5 = pinkDot
     map =[
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,2,0,0,0,0,0,0,0,0,0,0,3,1],
@@ -60,6 +67,9 @@ export default class TileMap {
                     case 3:
                         image = this.ghost;
                         break;
+                    case 4:
+                            image = this.ghost1;
+                            break;
                 }
                if (image != null)
                 ctx.drawImage(
@@ -78,7 +88,18 @@ export default class TileMap {
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
     };
-   
+   //started here trying to add pacman movement and the board went away
+    getPacman(velocity) {
+        for (let row =0; row < this.map.length; row++){
+            for(let column =0; column < this.map[row].length; column++){
+                let tile = this.map[row] [column];
+                if(tile === 4) {
+                    this.map[row] [column] = 0;
+                    return new Pacman(column * this.tileSize, row * this.tileSize, this.tileSize, velocity, this.tileMap);
+                }
+            }
+        }
+    }
     #setCanvasSize(canvas) {
     canvas.height = this.map.length * this.tileSize;
     canvas.width = this.map[0].length * this.tileSize; 
