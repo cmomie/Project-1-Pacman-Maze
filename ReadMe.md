@@ -43,6 +43,9 @@ Get Pacman through the maze until he reaches the Ghost in under 30 seconds
     //Create a for loop to draw the map by looping the rows in the map by getting the length line 44
     //after looping the rows loop the columns
 
+    ************Updates for the Future**************
+    //Incorporate 
+
 source used to inspire game: https://youtu.be/Tk48dQCdQ3E
 
 

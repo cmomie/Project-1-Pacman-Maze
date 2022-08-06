@@ -13,9 +13,10 @@ const ghostimg = document.getElementById('ghost');
 //let pacman 
 /* 2nd create the function gameLoop; this loop will redraw the game every second for up to 75 times using setInterval; 
 1000 miliseconds = 1 second (This Function is the Most Important Part of the Game) */
+
 window.addEventListener('DOMContentLoaded', function() {
-     tileMap = new TileMap(tileSize); //passing in the tile size in the new TileMap
-     pacman = tileMap.getPacman(velocity)
+    tileMap = new TileMap(tileSize); //passing in the tile size in the new TileMap
+    pacman = tileMap.getPacman(velocity)
     ghost = new Character(10, 20, ghostimg, 70, 80)
     const runGame = setInterval(gameLoop, 1000 / 75);
 });
