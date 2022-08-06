@@ -6,9 +6,7 @@ Get Pacman through the maze until he reaches the Ghost in under 30 seconds
     images directory with the pictures of the pacman players and tile map, include css styling in html file, game.js, tilemap.js, index.html
                             
 
-                            Create the function loop that will allow the game to operate
-
-                            
+    ****************Create the function loop that will allow the game to operate
 
 ******************** Game Creation ************************
     //Create the character legend and 2d gameboard
