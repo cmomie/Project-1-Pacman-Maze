@@ -25,14 +25,60 @@
             height: 100vh;
             background:linear-gradient(#c53448, #701228);
         }
+
+.timer {
+  font-family: sans-serif;
+  border-radius: 30px;
+  
+}
+
+.timer__part {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.timer__btn {
+  width: 50px;
+  height: 50px;
+  margin-left: 16px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background: #8208e6;
+  cursor: pointer;
+}
+
+.timer__btn--start {
+  background: #00b84c;
+}
+
+.timer__btn--stop {
+  background: #ff0256;
+}
+
+
     </style>
 </head>
 <body>
-    <div>
+    <div id="container">
+        <img src="./images/ghost.png" alt="ghost" id="ghost" style="display: none;"> 
+        <aside id="top-left"><h2>Pac Man</h2></aside>
+        <aside id="top-right"><h2 id="movement"></h2></aside>
+        <main>
+            <canvas id="gameCanvas"> <!--play it, a game --></canvas>
+        </main>
+        <!--<aside id="btm-left"><h2 id="score">100</h2></aside>
+        <aside id="btm-right"><h2 id="status">play the game</h2></aside>-->
+      
+     
+
+</div>
+<div class="timer"></div>
+    <!--<div>
         <h1>Pac-Man</h1>
-        <canvas id="gameCanvas"></canvas>
+        <canvas id="gameCanvas"></canvas> 
         
-    </div>
-    <script src="game.js" type="module"></script>
+    </div> -->
+    <script src="game.js"></script>
 </body>
 </html>
