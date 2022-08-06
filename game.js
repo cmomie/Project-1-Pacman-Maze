@@ -12,7 +12,7 @@ class Character {
         }
     }
 }
-
+//testing 
 let ghost 
 const MovingDirection = {
      up: 0,
