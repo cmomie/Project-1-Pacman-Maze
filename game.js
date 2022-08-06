@@ -1,3 +1,24 @@
+const tileSize = 32; //we want each tile as 32 pixels; Identify how big the tiles should be in the game using tileSize
+const velocity = 2;
+
+//Create the following variable that will be needed for the game to operate and be viewied on the browser.
+
+const canvas = document.getElementById('gameCanvas'); //1st  define canvas to find it's html element by id 'gameCanvas';
+const ctx = canvas.getContext('2d'); //define this to draw to the screen in 2d
+const status = document.getElementById('status');
+const score = document.getElementById('score'); // we went in and added an id for the score 
+const ghostimg = document.getElementById('ghost');
+//the tileMape has to be initialized after being imported on line 1 by creating a variable.  
+//let tileMap 
+//let pacman 
+/* 2nd create the function gameLoop; this loop will redraw the game every second for up to 75 times using setInterval; 
+1000 miliseconds = 1 second (This Function is the Most Important Part of the Game) */
+window.addEventListener('DOMContentLoaded', function() {
+     tileMap = new TileMap(tileSize); //passing in the tile size in the new TileMap
+     pacman = tileMap.getPacman(velocity)
+    ghost = new Character(10, 20, ghostimg, 70, 80)
+    const runGame = setInterval(gameLoop, 1000 / 75);
+});
 class Character {
     constructor(x, y, image, width, height) {
         this.x = x;
@@ -224,27 +245,7 @@ class TileMap {
    
 }
 
-const tileSize = 32; //we want each tile as 32 pixels; Identify how big the tiles should be in the game using tileSize
-const velocity = 2;
 
-//Create the following variable that will be needed for the game to operate and be viewied on the browser.
-
-const canvas = document.getElementById('gameCanvas'); //1st  define canvas to find it's html element by id 'gameCanvas';
-const ctx = canvas.getContext('2d'); //define this to draw to the screen in 2d
-const status = document.getElementById('status');
-const score = document.getElementById('score'); // we went in and added an id for the score 
-const ghostimg = document.getElementById('ghost');
-//the tileMape has to be initialized after being imported on line 1 by creating a variable.  
-//let tileMap 
-//let pacman 
-/* 2nd create the function gameLoop; this loop will redraw the game every second for up to 75 times using setInterval; 
-1000 miliseconds = 1 second (This Function is the Most Important Part of the Game) */
-window.addEventListener('DOMContentLoaded', function() {
-     tileMap = new TileMap(tileSize); //passing in the tile size in the new TileMap
-     pacman = tileMap.getPacman(velocity)
-    ghost = new Character(10, 20, ghostimg, 70, 80)
-    const runGame = setInterval(gameLoop, 1000 / 75);
-});
 function movementHandler(e) {
     console.log('movement', e.key);
 //switch will allow us to use different keys according to the following conditions if we press those buttons
