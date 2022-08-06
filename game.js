@@ -60,7 +60,7 @@ class Pacman {
         this.#loadPacmanImages();
     }
     draw(ctx){
-        this.#move();
+        //this.#move();
         ctx.drawImage(this.pacmanImages[this.pacmanImageIndex], this.x, this.y, this.tileSize, this.tileSize);
     }
     #loadPacmanImages(){
@@ -300,10 +300,10 @@ document.addEventListener('keydown', movementHandler);
 function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
    // movement.textContent = `X:${pacman.x}\nY:${pacman.y}`;
-    if (pacman.alive){
-        pacman.draw(ctx);
-let hit = detectHit(pacman, tileMap)
-    }
+//     if (pacman.alive){
+//         pacman.draw(ctx);
+// let hit = detectHit(pacman, tileMap)
+//     }
 tileMap.draw(canvas,ctx); // we will execute this on every single loop of the game
 pacman.draw(ctx);
 
