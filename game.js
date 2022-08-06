@@ -8,9 +8,7 @@ const ctx = canvas.getContext('2d'); //define this to draw to the screen in 2d
 const status = document.getElementById('status');
 const score = document.getElementById('score'); // we went in and added an id for the score 
 const ghostimg = document.getElementById('ghost');
-//the tileMape has to be initialized after being imported on line 1 by creating a variable.  
-//let tileMap 
-//let pacman 
+
 /* 2nd create the function gameLoop; this loop will redraw the game every second for up to 75 times using setInterval; 
 1000 miliseconds = 1 second (This Function is the Most Important Part of the Game) */
 
@@ -78,7 +76,7 @@ class Pacman {
 
         this.pacmanImages = [pacmanImage1, pacmanImage2, pacmanImage3, pacmanImage4];
 
-        this.pacmanImageIndex = 3; //pacman fully closed
+        this.pacmanImageIndex = 2; //pacman fully closed
     }
 
     #keydown =(event)=>{

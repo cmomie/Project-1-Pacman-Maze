@@ -1,9 +1,10 @@
 ******************** Objective of the Game ***********************
-Get Pacman through the maze until he reaches the Ghost in under 30 seconds
+    Get Pacman through the maze until he reaches the Ghost in under 30 seconds
+    Player must add the amount of time that they will need to play the game
                         
                             
 ******************** Create Files Needed ***********************
-    images directory with the pictures of the pacman players and tile map, include css styling in html file, game.js, tilemap.js, index.html
+    Images directory with the pictures of the pacman players and tile map, include css styling in html file, game.js, tilemap.js, index.html
                             
 
     ****************Create the function loop that will allow the game to operate
