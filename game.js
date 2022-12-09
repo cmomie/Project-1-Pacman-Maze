@@ -57,7 +57,7 @@ class Pacman {
 
         this.#loadPacmanImages();
     }
-    draw(){
+    draw(ctx){
         //this.#move();
         ctx.drawImage(this.pacmanImages[this.pacmanImageIndex], this.x, this.y, this.tileSize, this.tileSize);
     }
